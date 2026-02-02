@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>HTML Form</title>
+</head>
+<script>
+function myclick(){
+
+		let name=document.getElementById("name").value;
+		let age=document.getElementById("age").value;
+		
+		
+		/*window.alert("Your name is "+name+"Your age is "+age);*/	
+		document.write("Your name is "+name+" Your age is "+age);	
+
+}
+
+</script>
+
+<body>
+
+	<form action="" method="post">
+	<label>Enter Name:-</label><br>
+	<input type="text" name="name"id="name" size="30"><br>
+	<label>Enter your age:-</label><br>
+	<input type="number" name="age" id="age" size="30"><br><br>
+	
+	<button  type="submit" name="submit" onclick="myclick();">Click</button>	
+	
+	</form>
+
+</body>
+</html>
