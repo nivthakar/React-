@@ -1,0 +1,127 @@
+<html>
+<head>
+<title>Valid form</title>
+<script>
+function valid(){
+
+	let name=document.getElementById("name").value;
+	let email=document.getElementById("email").value;
+	let gen=document.forms["myform"]["gender"];
+	let address=document.getElementById("address").value;
+	let city =document.getElementById("city").value;
+	let contact=document.getElementById("contact").value;
+	let password=document.getElementById("password").value;
+	let con_password=document.getElementById("con_password").value;
+	
+	let filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+	
+	if(name==""){
+	alert("Name is required");
+	return false;
+	}
+	if(email==""){
+	alert("Email is required");
+	return false;
+	}
+	if(!filter.test(email))
+	{
+	alert("Please provide a valid email address");
+	email.focus;
+	return false;
+	}
+	if(gen[0].checked==false&&gen[1].checked==false){
+	alert("Gender is required");
+	return false;
+	}
+	if(address==""){
+	alert("Address is required");
+	return false;
+	}
+	if(city=="Select your name"){
+	alert("Select City");
+	return false;
+	}
+	if(contact==""){
+	alert("Please Enter your Contact");
+	return false;
+	}
+	if(contact.length!=10){
+	alert("!0 digits ia required");
+	return false;
+	}
+	if(password==""){
+	alert("Password is required");
+	return false;
+	}
+	if(con_password=="")
+	{
+	   alert("Please enter Confirm Password");
+	   return false;
+	}
+	if(password!=con_password)
+	{
+	 alert("Passwords did not match");  
+	 return false;
+	}
+	return true;
+
+}
+</script>
+</head>
+<body>
+<form  name="myform" action="" method="POST" onsubmit="return valid();">
+<table align="center">
+<tr>
+<th>Name:-</th>
+<td><input type="text" name="name" id="name" size="30"></td>
+</tr>
+<tr>
+<th>Email:-</th>
+<td><input type="text" name="email" id="email" size="30"></td>
+</tr>
+<tr>
+<th>Gender:-</th>
+<td><input type="radio" name="gender" id="gender" value="Male">Male
+	<input type="radio" name="gender" id="gender" value="Female">Female</td>
+</tr>
+<tr>
+<th>Hobby</th>
+<td><input type="checkbox" name="hobby[]" value="Cricket">Cricket
+    <input type="checkbox" name="hobby[]" value="Music">Music
+	<input type="checkbox" name="hobby[]" value="Reading">Reading</td>
+</tr>
+<tr>
+<th>Address</th>
+<td><textarea name="address" id="address" rows="5" cols="25"></textarea></td>
+</tr>
+<tr>
+<th>City</th>
+<td>
+<select name="city" id="city">
+<option value="Select your name">Select your name</option>
+<option>Rajkot</option>
+<option>Ahmedabad</option>
+<option>Junagadh</option>
+<option>Jamnagar</option>
+</select></td>
+</tr>
+<tr>
+<th>Contant No</th>
+<td><input type="text" name="contact" id="contact" size="30"></td>
+</tr>
+<tr>
+<th>Password:-</th>
+<td><input type="password" name="password" id="password" size="30"></td>
+</tr>
+<tr>
+<th>Cofirm Password:-</th>
+<td><input type="password" name="con_password" id="con_password" size="30"></td>
+</tr>
+<tr>
+<td><input type="submit" name="submit" value="Submit"><td>
+</tr>
+</table>
+</form>
+
+</body>
+</html>
