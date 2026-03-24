@@ -7,6 +7,7 @@ import Data from './components/Data'
 import Button from './components/Button'
 import {Info,Info2 } from './components/Info'
 import Welcome from './components/Welcome'
+import API from './components/API'
 
 import './App.css'
 import Nav from './components/Nav'
@@ -30,7 +31,9 @@ function App() {
      <Welcome name="Nirav" />
       <MountingDemo />
       <UpdatingDemo />
-      <PureComponentDemo value="Hello, Pure Component!" />  
+      
+      <PureComponentDemo value="Hello, Pure Component!" /> 
+      <API /> 
      <Footer /> 
     </div>
   )

@@ -7,7 +7,7 @@ class PureComponentDemo extends React.PureComponent {
 
     return (
       <div>
-        <h2>Pure Component Demo</h2>
+         <h2>Pure Component Demo</h2>
         <p>Value: {this.props.value}</p>
       </div>
     );
